@@ -2,3 +2,15 @@
 @plugin "daisyui";
 
 /* Custom styles */
+
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    background-color: #b87f7f; /* Match the tooltip background */
+    height: 0.9em;
+    width: 0.9em;
+    bottom: -0.9em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+  }

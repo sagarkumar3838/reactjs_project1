@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AdminLogin from '../Admin/AdminLogin'
-import { faUser } from '@fortawesome/free-regular-svg-icons'
-import UserLogin from '../User/UserLogin'
+
 import { FaRegUser } from "react-icons/fa";
 import { GrUserAdmin } from "react-icons/gr";
 const LandingPage = () => {
@@ -19,7 +17,7 @@ const LandingPage = () => {
     
   </video>
     <h1 className='text-center mt-8 font-bold text-6xl '>WelCome to NandiExpress</h1>
-    <div className='landingpage relative z-10 border-0 flex flex-wrap items-center justify-center gap-10 mt-40 h-[25rem] w-[50%] ml-[25%] bg-transparent  '>
+    <div className='landingpage relative z-10 border-0 flex flex-wrap items-center justify-center gap-10 mt-24 h-[25rem] w-[50%] ml-[25%] bg-transparent  '>
        <div className='text-center rounded-full  hover:bg-[#418c4c] h-[10rem] md:h-[12rem] w-[10rem] md:w-[12rem] pt-4 transition-transform transform hover:scale-105 '>
        <GrUserAdmin className='h-[4rem] md:h-[6rem] w-[4rem] md:w-[6rem] mb-2 mx-auto  ' />
        <button className='border-0 w-[6rem] md:w-[7rem] font-bold uppercase btn btn-outline btn-gray-400'>

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import VideoBackground from './VideoBackground';
+import { Link } from 'react-router-dom';
+import AdminButton from './AdminButton';
 
 const ContactForm = () => {
   const [username, setUsername] = useState("");
@@ -66,14 +68,17 @@ const ContactForm = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div className="text-start">
+      <div className="flex gap-5">
         <button
           type="submit"
           className="bg-blue-600 hover:bg-opacity-90 text-white px-8 py-3 rounded mb-4"
         >
           Submit
         </button>
+        <Link to="/adminsignUp"><AdminButton/></Link> 
       </div>
+
+     
       <ToastContainer />
     </form>
   );

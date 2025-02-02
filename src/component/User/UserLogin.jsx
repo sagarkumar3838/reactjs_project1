@@ -81,7 +81,7 @@ const ContactForm = () => {
     
   
 const ContactFormCard = () => (
-  <div className="bg-[#678dc6] dark:bg-[#162231] rounded-2xl border-[25px] dark:border-[#1C293A] border-[#678dc6] p-6 md:p-12 text-black">
+  <div className="bg-[#678dc6] dark:bg-[#162231] rounded-2xl border-[25px] dark:border-[#1C293A] border-[#678dc6] p-6 md:p-12 text-black overflow-hidden">
     <h2 className="text-2xl md:text-[45px] leading-none font-bold mb-4">
       User Login
     </h2>
@@ -94,15 +94,15 @@ const ContactFormCard = () => (
 
 const UserLogin = () => {
   return (
-    <section className="ezy__contact11 light bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white overflow-hidden">
+    <section className=" light bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white ">
       <div
-        className="bg-no-repeat bg-left-bottom bg-cover py-14"
+        className="bg-no-repeat bg-left-bottom bg-cover  py-3 overflow-hidden fixed top-0 left-0 w-full h-full  z-[-1]"
         style={{
           backgroundImage:
             "url(/assests/images/user.jpg)",
         }}
       >
-        <div className="container px-4">
+        <div className="container px-4 overflow-hidden">
           <div className="grid grid-cols-12 py-6">
             <div className="col-span-12 lg:col-span-4 mb-12 lg:mb-0">
               <h2 className="text-2xl leading-none font-bold md:text-[40px] mb-6 text-white">
@@ -118,7 +118,7 @@ const UserLogin = () => {
           </div>
         </div>
       </div>
-      <div className="ezy__contact11-blank-card"></div>
+      
     </section>
   );
 };
