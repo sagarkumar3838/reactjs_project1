@@ -1,10 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import AdminsignupVideo from './AdminsignupVideo';
-import { useNavigate } from 'react-router-dom';
+import UserSignupVideo from './UserSignupVideo';
 
-const AdminSignUp = () => {
+const UserSignup = () => {
   const [admin, setAdmin] = useState({
     username: "",
     email: "",
@@ -19,12 +18,11 @@ const AdminSignUp = () => {
       [name]: value,
     }));
   };
-  
-  let navigate = useNavigate()
-  const addAdmin = (e) => {
+
+  const addUser = (e) => {
     e.preventDefault(); // Prevent default form submission it should not reload again and again
     if (!admin) {
-      console.error("Admin data is required");
+      console.error("user data is required");
       return;
     }
 
@@ -52,7 +50,7 @@ const AdminSignUp = () => {
 
   return (
     <section>
-      <AdminsignupVideo/>
+      <UserSignupVideo/>
       <div className='flex justify-center mt-[6rem] ml-[30rem]'>
       <div className="max-w-sm bg-gradient-to-b from-white to-gray-200 rounded-2xl p-6 border-5 border-white shadow-lg mx-5 my-5 grid grid-cols-1   ">
         <div className="text-center font-bold text-3xl text-blue-600">Admin Sign Up</div>
@@ -99,7 +97,7 @@ const AdminSignUp = () => {
           />
           <button
             type="button" // Change to type="button"
-            onClick={addAdmin}
+            onClick={addUser}
             className="w-full font-bold bg-gradient-to-r from-blue-600 to-teal-500 text-white py-4 mt-5 rounded-full shadow-md transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95"
           >
             SUBMIT
@@ -114,4 +112,4 @@ const AdminSignUp = () => {
   );
 }
 
-export default AdminSignUp;
+export default UserSignup;

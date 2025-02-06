@@ -1,34 +1,73 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+
+import { Link } from 'react-router-dom';
+
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
+import UserButton from './UserButton';
 
 const ContactForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user , setUser] = useState("")
 
+
+
+  
+  useEffect(()=>{
+    axios.get("http://localhost:3000/user" )
+  .then((res)=>{
+   console.log(res);
+   setUser(res.data)
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+  },[])
+  console.log(user);
   const handleSubmit = (event) => {
     event.preventDefault();
 
+
+    
+       let bool =  user.filter((user)=>{
+          return (user.username === username && user.email === email && user.password === password)
+        })
+    
+        if (bool.length>0){
+          toast.success("Admin login successfully")
+        }
+        else{
+          toast.error("Admin data not correct")
+        }
+    
+
     // Perform form validation
-    if (!username || !email || !password) {
-      toast.error("Please fill in all fields.");
-      return;
-    }
+    // if (!username || !email || !password) {
+    //   toast.error("Please fill in all fields.");
+    //   return;
+    // }
 
-    // Log the values to the console
-    console.log("Username:", username);
-    console.log("Email:", email);
-    console.log("Password:", password);
+    // // Log the values to the console
+    // console.log("Username:", username);
+    // console.log("Email:", email);
+    // console.log("Password:", password);
 
-    // Show success notification
-    toast.success("Form submitted successfully!");
+    // // Show success notification
+    // toast.success("Form submitted successfully!");
 
     // Clear the form fields
     setUsername("");
     setEmail("");
     setPassword("");
   };
+
+  
+    const location = useLocation()
+    console.log(location);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -72,6 +111,7 @@ const ContactForm = () => {
         >
           Submit
         </button>
+        <Link to="/UserSignup"><UserButton/></Link>
       </div>
       <ToastContainer />
     </form>

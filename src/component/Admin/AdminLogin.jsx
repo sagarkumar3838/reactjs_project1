@@ -1,40 +1,87 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import VideoBackground from './VideoBackground';
 import { Link } from 'react-router-dom';
 import AdminButton from './AdminButton';
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [admin , setAdmin] = useState([])
+
+
+  useEffect(()=>{
+    axios.get("http://localhost:3000/admins" )
+  .then((res)=>{
+   console.log(res);
+   setAdmin(res.data)
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+  },[])
+  console.log(admin);
+
+
+  let navigate = useNavigate()
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Perform form validation
-    if (!username || !email || !password) {
-      toast.error("Please fill in all fields.");
-      return;
+   
+
+   let bool =  admin.filter((user)=>{
+      return (user.username === username && user.email === email && user.password === password)
+    })
+
+    if (bool.length>0){
+      toast.success("Admin login successfully")
+      navigate('/adminhomepage')
+    }
+    else{
+      toast.error("Admin data not correct")
     }
 
+    // Perform form validation
+    // if (!username || !email || !password) {
+    //   toast.error("Please fill in all fields.");
+    //   return;
+    // }
+
     // Log the values to the console
-    console.log("AdminName:", username);
-    console.log("AdminEmail:", email);
-    console.log("AdminPassword:", password);
+    // console.log("AdminName:", username);
+    // console.log("AdminEmail:", email);
+    // console.log("AdminPassword:", password);
 
     // Show success notification
-    toast.success("Form submitted successfully!");
+    // toast.success("Form submitted successfully!");
 
     // Clear the form fields
     setUsername("");
     setEmail("");
     setPassword("");
+
+
+    
   };
 
+  const location = useLocation()
+  console.log(location);
+
   return (
-    <form onSubmit={handleSubmit}>
+    <>
+   {/* <div>
+    <p>userName: {location.state.name}</p>
+    <p>password: {location.state.password}</p>
+   </div> */}
+    <form >
+
+
       <div className="mb-4">
         <input
           type="text"
@@ -72,6 +119,7 @@ const ContactForm = () => {
         <button
           type="submit"
           className="bg-blue-600 hover:bg-opacity-90 text-white px-8 py-3 rounded mb-4"
+          onClick={handleSubmit}
         >
           Submit
         </button>
@@ -81,6 +129,7 @@ const ContactForm = () => {
      
       <ToastContainer />
     </form>
+    </>
   );
 };
 

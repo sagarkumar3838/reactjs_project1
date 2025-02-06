@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AdminsignupVideo = () => {
+const UserSignupVideo = () => {
   return (
     <div>
         <div className="fixed top-0 left-0 w-full h-full overflow-hidden z-[-1]">
@@ -13,4 +13,4 @@ const AdminsignupVideo = () => {
   )
 }
 
-export default AdminsignupVideo
+export default UserSignupVideo

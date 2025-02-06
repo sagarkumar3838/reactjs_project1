@@ -22,7 +22,7 @@ const LandingPage = () => {
        <GrUserAdmin className='h-[4rem] md:h-[6rem] w-[4rem] md:w-[6rem] mb-2 mx-auto  ' />
        <button className='border-0 w-[6rem] md:w-[7rem] font-bold uppercase btn btn-outline btn-gray-400'>
        <span className="loading loading-spinner"></span>
-        <Link to='/adminlogin'>admin</Link>
+        <Link state={{name: "sagar", password:"password"}} to='/adminlogin'>admin</Link>
         </button>
        </div>
 

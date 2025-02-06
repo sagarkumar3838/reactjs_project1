@@ -34,6 +34,21 @@
       "email": "test@gmail.com",
       "password": "nshkjfksadjf",
       "phone": "+917979922119"
+    },
+    {
+      "id": "9c05",
+      "username": "sagar",
+      "email": "deadpheniox38@gmail.com",
+      "password": "xmvnskdn",
+      "phone": "+917979922119"
+    },
+    {
+      "id": "abaa",
+      "username": "sagar",
+      "email": "deadpheniox38@gmail.com",
+      "password": "1234",
+      "phone": "+917979922119"
     }
-  ]
+  ],
+  "user": []
 }
