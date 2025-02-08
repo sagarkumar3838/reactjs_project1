@@ -1,30 +1,177 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios'; // Make sure to import axios
+import AddBusVideo from '../Admin/AddBusVideo';
 
 const AddBus = () => {
+  const [bus, setBus] = useState({
+    busid: "",
+    busNumber: "",
+    departure: "",
+    arrival: "",
+    seats: "",
+    thumbnail: "",
+    dates: ""
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setBus((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const addBus = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    if (!bus) {
+      console.error("Bus data is required");
+      return;
+    }
+
+    axios.post("http://localhost:3000/bus", bus)
+      .then((res) => {
+        console.log(res);
+        toast.success("Book Ticket Successfully!");
+
+        // Clear the form data after successful submission
+        setBus({
+          busid: "",
+          busNumber: "",
+          departure: "",
+          arrival: "",
+          seats: "",
+          thumbnail: "",
+          dates: ""
+        });
+      })
+      .catch((err) => {
+        console.error(err); // Log the error for debugging
+        toast.error("Booking Cancel");
+      });
+  };
+
   return (
-    <div class="w-330px p-40px-30px bg-gray-300 rounded-lg shadow-2xl">
-    <h1 class="text-3xl font-semibold mb-35px text-gray-700">Login</h1>
-    <form action="#">
-      <div class="relative w-full h-50px mb-20px">
-        <input required="" type="text" class="w-full h-full pl-45px outline-none border-none text-xl bg-gray-300 text-gray-700 rounded-2xl shadow-inner focus:shadow-inner">
-        <span class="absolute top-0 left-0 w-50px h-full flex items-center justify-center text-gray-700"><svg class="" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 512 512" y="0" x="0" height="20" width="50" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><path class="" data-original="#000000" fill="#595959" d="M256 0c-74.439 0-135 60.561-135 135s60.561 135 135 135 135-60.561 135-135S330.439 0 256 0zM423.966 358.195C387.006 320.667 338.009 300 286 300h-60c-52.008 0-101.006 20.667-137.966 58.195C51 .255 395.539 31 444.833 31 497c0 8.284 6.716 15 15 15h420c8.284 0 15-6.716 15-15 0-52.167-20.255-101.461-57.034-138.805z"></path></g></svg></span>
-        <label class="absolute top-1/2 transform -translate-y-1/2 left-11 pointer-events-none text-gray-500">Email or Phone</label>
+    <section className=''>
+      <AddBusVideo />
+      <div className='flex justify-end mt-1  md:mx-0 '>
+        <div className="  max-w-4xl bg-gradient-to-b from-white to-gray-200 rounded-2xl p-3 border-5 border-white shadow-lg mx-5 my-5 grid grid-cols-1 ">
+         
+          <div className="flex flex-col ">
+            <div className="text-center font-bold text-3xl text-blue-600">Bus Booking</div>
+            <form className="m-4 text-center">
+              <div className='flex gap-3'>
+                <div className="flex flex-col w-full">
+                  <label htmlFor="busid" className="text-gray-700 text-center">BUS_ID</label>
+                  <input
+                    id="busid"
+                    name="busid"
+                    type="text"
+                    value={bus.busid}
+                    onChange={handleInputChange}
+                    className="w-full bg-white border-none p-4 rounded-full mt-1 shadow-md border-2 border-transparent focus:outline-none focus:border-teal-500 mb-2"
+                    required
+                    autoComplete="Busid"
+                  />
+                </div>
+                <div className="flex flex-col w-full">
+                  <label htmlFor="busNumber" className="text-gray-700">Bus Number</label>
+                  <input
+                    id="busNumber"
+                    name="busNumber"
+                    type="text"
+                    value={bus.busNumber}
+                    onChange={handleInputChange}
+                    className="w-full bg-white border-none p-4 rounded-full mt-1 shadow-md border-2 border-transparent focus:outline-none focus:border-teal-500"
+                    required
+                    autoComplete="busNumber"
+                  />
+                </div>
+              </div>
+              <div className='flex gap-3'>
+                <div className="flex flex-col w-full">
+                  <label htmlFor="departure" className="text-gray-700">Departure</label>
+                  <input
+                    id="departure"
+                    name="departure"
+                    type="datetime-local"
+                    value={bus.departure}
+                    onChange={handleInputChange}
+                    className="w-full bg-white border-none p-4 rounded-full mt-1 shadow-md border-2 border-transparent focus:outline-none focus:border-teal-500 mb-2"
+                    required
+                    autoComplete='departure'
+                  />
+                </div>
+                <div className="flex flex-col w-full">
+                  <label htmlFor="arrival" className="text-gray-700">Arrival</label>
+                  <input
+                    id="arrival"
+                    name="arrival"
+                    type="datetime-local"
+                    value={bus.arrival}
+                    onChange={handleInputChange}
+                    className="w-full bg-white border-none p-4 rounded-full mt-1 shadow-md border-2 border-transparent focus:outline-none focus:border-teal-500 mb- 2"
+                    required
+                    autoComplete='arrival'
+                  />
+                </div>
+              </div>
+               <div className='flex gap-3'>
+               <div className="flex flex-col w-full">
+                <label htmlFor="seats" className="text-gray-700">Seats</label>
+                <input
+                  id="seats"
+                  name="seats"
+                  type="number"
+                  value={bus.seats}
+                  onChange={handleInputChange}
+                  className="w-full bg-white border-none p-4 rounded-full mt-1 shadow-md border-2 border-transparent focus:outline-none focus:border-teal-500 mb-2"
+                  required
+                  autoComplete='seats'
+                />
+              </div>
+              <div className="flex flex-col w-full">
+                <label htmlFor="dates" className="text-gray-700">Booking Dates</label>
+                <input
+                  id="dates"
+                  name="dates"
+                  type="date"
+                  value={bus.dates}
+                  onChange={handleInputChange}
+                  className="w-full bg-white border-none p-4 rounded-full mt-1 shadow-md border-2 border-transparent focus:outline-none focus:border-teal-500 mb-2"
+                  required
+                  autoComplete='dates'
+                />
+              </div>
+               </div>
+              <div className="flex flex-col w-full">
+                <label htmlFor="thumbnail" className="text-gray-700">Bus Image</label>
+                <input
+                  id="thumbnail"
+                  name="thumbnail"
+                  type="url"
+                  value={bus.thumbnail}
+                  onChange={handleInputChange}
+                  className="w-full bg-white border-none p-4 rounded-full mt-1 shadow-md border-2 border-transparent focus:outline-none focus:border-teal-500 mb-2"
+                  required
+                  autoComplete='thumbnail'
+                />
+              </div>
+              <button
+                type="button"
+                onClick={addBus}
+                className="w-full md:w-[15rem] font-bold bg-gradient-to-r from-blue-600 to-teal-500 text-white py-4 mt-5 rounded-md shadow-md transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95"
+              >
+                SUBMIT
+              </button>
+              <ToastContainer />
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="relative w-full h-50px mb-20px">
-        <input required="" type="password" class="w-full h-full pl-45px outline-none border-none text-xl bg-gray-300 text-gray-700 rounded-2xl shadow-inner focus:shadow-inner">
-        <span class="absolute top-0 left-0 w-50px h-full flex items-center justify-center text-gray-700"><svg class="" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 512 512" y="0" x="0" height="20" width="50" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><path class="" data-original="#000000" fill="#595959" d="M336 192h-16v-64C320 57.406 262.594 0 192 0S64 57.406 64 128v64H48c-26.453 0-48 21.523-48 48v224c0 26.477 21.547 48 48 48h288c26.453 0 48-21.523 48-48V240c0-26.477-21.547-48-48-48zm-229.332-64c0-47.063 38.27-85.332 85.332-85.332s85.332 38.27 85.332 85.332v64H106.668zm0 0"></path></g></svg></span>
-        <label class="absolute top-1/2 transform -translate-y-1/2 left-11 pointer-events-none text-gray-500">Password</label>
-      </div>
-      <div class="text-left mb-2">
-        <a href="#" class="text-gray-500 text-base">Forgot Password?</a>
-      </div>
-      <button class="w-full h-50px text-xl font-semibold bg-gray-300 rounded-2xl border-none outline-none cursor-pointer text-gray-700 shadow-md hover:bg-gray-400">Sign in</button>
-      <div class="mt-2 text-gray-700 text-base">
-        Not a member? <a href="#" class="text-blue-500 hover:underline">signup now</a>
-      </div>
-    </form>
-  </div>
-  )
+    </section>
+  );
 }
 
-export default AddBus
+export default AddBus;

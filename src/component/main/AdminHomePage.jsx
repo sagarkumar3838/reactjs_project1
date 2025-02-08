@@ -4,19 +4,21 @@ import AdminSideBar from './AdminSideBar';
 import { Route, Routes } from 'react-router-dom';
 import AdminDashBoard from './AdminDashBoard';
 import AddBus from './AddBus';
+import ViewBus from './ViewBus';
 
 const AdminHomePage = () => {
   return (
     <div>
       <Header />
       <section className="flex flex-row">
-        <aside className=""> {/* Sidebar width can be adjusted */}
+        <aside className="1/4"> {/* Sidebar width can be adjusted */}
           <AdminSideBar />
         </aside>
-        <main className="w-full "> {/* Main content area */}
+        <main className="w-3/4"> {/* Main content area */}
           <Routes>
             <Route path='/dashboard' element={<AdminDashBoard />} />
             <Route path="/addbus" element={<AddBus />} />
+            <Route path="/viewbus/:id" element={<ViewBus />} />
           </Routes>
         </main>
       </section>

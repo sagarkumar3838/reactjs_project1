@@ -14,3 +14,16 @@
     left: 50%;
     transform: translate(-50%) rotate(45deg);
   }
+
+  /* Neomorphic effect */
+.shadow-neumorphic {
+  background: #e0e0e0; /* Light background */
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px #b8b8b8, 
+              -8px -8px 15px #ffffff; /* Inner shadow */
+}
+
+.shadow-neumorphic:hover {
+  box-shadow: 4px 4px 10px #b8b8b8, 
+              -4px -4px 10px #ffffff; /* Lighter shadow on hover */
+}

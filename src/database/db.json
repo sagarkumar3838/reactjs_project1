@@ -50,5 +50,87 @@
       "phone": "+917979922119"
     }
   ],
-  "user": []
+  "user": [],
+  "bus": [
+    {
+      "id": "aa9c",
+      "busid": "23424",
+      "busNumber": "jh108926",
+      "departure": "2025-02-08T08:33",
+      "arrival": "2025-02-14T08:34",
+      "seats": "4",
+      "thumbnail": "C:\\fakepath\\4qcwxem1.jpg",
+      "dates": "2025-02-07"
+    },
+    {
+      "id": "b0fb",
+      "busid": "12345",
+      "busNumber": "jh106547",
+      "departure": "2025-02-13T20:40",
+      "arrival": "2025-02-11T06:40",
+      "seats": "4",
+      "thumbnail": "C:\\fakepath\\sbiblpzv.gif",
+      "dates": "2025-02-20"
+    },
+    {
+      "id": "f462",
+      "busid": "647747",
+      "busNumber": "jh106574",
+      "departure": "2025-02-21T04:43",
+      "arrival": "2025-02-05T04:43",
+      "seats": "4",
+      "thumbnail": "C:\\fakepath\\4qcwxem1.jpg",
+      "dates": "2025-02-19"
+    },
+    {
+      "id": "16bd",
+      "busid": "23429",
+      "busNumber": "jh108929",
+      "departure": "2025-02-13T16:42",
+      "arrival": "2025-02-21T16:42",
+      "seats": "2",
+      "thumbnail": "",
+      "dates": "2025-02-25"
+    },
+    {
+      "id": "6284",
+      "busid": "23428",
+      "busNumber": "jh108927",
+      "departure": "2025-02-15T04:47",
+      "arrival": "2025-02-22T16:47",
+      "seats": "4",
+      "thumbnail": "C:\\fakepath\\bus-2730653_1280.jpg",
+      "dates": "2025-02-20"
+    },
+    {
+      "id": "534a",
+      "busid": "2342434",
+      "busNumber": "jh107878",
+      "departure": "2025-02-12T16:48",
+      "arrival": "2025-02-21T16:48",
+      "seats": "3",
+      "thumbnail": "C:\\fakepath\\architecture-2569012_1280.jpg",
+      "dates": "2025-02-20"
+    },
+    {
+      "id": "d33d",
+      "busid": "234245",
+      "busNumber": "jh108936",
+      "departure": "2025-02-24T16:53",
+      "arrival": "2025-02-26T04:50",
+      "seats": "5",
+      "thumbnail": "C:\\fakepath\\aston-martin-2118857_1280.jpg",
+      "dates": "2025-02-20"
+    },
+    {
+      "id": "c086",
+      "busid": "23424",
+      "busNumber": "jh108978",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "seats": "4",
+      "thumbnail": "C:\\fakepath\\school-bus-3711352_1280.jpg",
+      "dates": "2025-02-26"
+    }
+  ]
 }
