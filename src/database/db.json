@@ -48,40 +48,24 @@
       "email": "deadpheniox38@gmail.com",
       "password": "1234",
       "phone": "+917979922119"
+    },
+    {
+      "id": "c108",
+      "username": "amit",
+      "email": "deadpheniox38@gmail.com",
+      "password": "1234",
+      "phone": "+917979922119"
     }
   ],
-  "user": [],
+  "user": [
+    {
+      "id": "7100",
+      "username": "sagar",
+      "email": "deadpheniox38@gmail.com",
+      "password": "4321"
+    }
+  ],
   "bus": [
-    {
-      "id": "aa9c",
-      "busid": "23424",
-      "busNumber": "jh108926",
-      "departure": "2025-02-08T08:33",
-      "arrival": "2025-02-14T08:34",
-      "seats": "4",
-      "thumbnail": "C:\\fakepath\\4qcwxem1.jpg",
-      "dates": "2025-02-07"
-    },
-    {
-      "id": "b0fb",
-      "busid": "12345",
-      "busNumber": "jh106547",
-      "departure": "2025-02-13T20:40",
-      "arrival": "2025-02-11T06:40",
-      "seats": "4",
-      "thumbnail": "C:\\fakepath\\sbiblpzv.gif",
-      "dates": "2025-02-20"
-    },
-    {
-      "id": "f462",
-      "busid": "647747",
-      "busNumber": "jh106574",
-      "departure": "2025-02-21T04:43",
-      "arrival": "2025-02-05T04:43",
-      "seats": "4",
-      "thumbnail": "C:\\fakepath\\4qcwxem1.jpg",
-      "dates": "2025-02-19"
-    },
     {
       "id": "16bd",
       "busid": "23429",
@@ -89,7 +73,7 @@
       "departure": "2025-02-13T16:42",
       "arrival": "2025-02-21T16:42",
       "seats": "2",
-      "thumbnail": "",
+      "thumbnail": "/assests/images/bus4.jpg",
       "dates": "2025-02-25"
     },
     {
@@ -99,7 +83,7 @@
       "departure": "2025-02-15T04:47",
       "arrival": "2025-02-22T16:47",
       "seats": "4",
-      "thumbnail": "C:\\fakepath\\bus-2730653_1280.jpg",
+      "thumbnail": "/assests/images/bus5.jpg",
       "dates": "2025-02-20"
     },
     {
@@ -109,7 +93,7 @@
       "departure": "2025-02-12T16:48",
       "arrival": "2025-02-21T16:48",
       "seats": "3",
-      "thumbnail": "C:\\fakepath\\architecture-2569012_1280.jpg",
+      "thumbnail": "/assests/images/bus6.jpg",
       "dates": "2025-02-20"
     },
     {
@@ -119,7 +103,7 @@
       "departure": "2025-02-24T16:53",
       "arrival": "2025-02-26T04:50",
       "seats": "5",
-      "thumbnail": "C:\\fakepath\\aston-martin-2118857_1280.jpg",
+      "thumbnail": "/assests/images/bus7.jpg",
       "dates": "2025-02-20"
     },
     {
@@ -129,8 +113,249 @@
       "departure": "2025-02-22T16:52",
       "arrival": "2025-02-22T16:52",
       "seats": "4",
-      "thumbnail": "C:\\fakepath\\school-bus-3711352_1280.jpg",
+      "thumbnail": "/assests/images/bus8.jpg",
       "dates": "2025-02-26"
+    }
+  ],
+  "search": [
+    {
+      "id": "1bc0",
+      "from": "delhi ",
+      "destination": "kolkata",
+      "checkIn": "2025-02-05T10:40",
+      "checkOut": "2025-02-28T10:40",
+      "adults": "01",
+      "children": "02",
+      "type": "AC"
+    },
+    {
+      "id": "a441",
+      "from": "mumbai",
+      "destination": "delhi",
+      "checkIn": "2025-02-16T16:51",
+      "checkOut": "2025-02-20T14:51",
+      "adults": "01",
+      "children": "0",
+      "type": "AC"
+    },
+    {
+      "id": "7425",
+      "from": "delhi ",
+      "destination": "kolkata",
+      "checkIn": "2025-02-07T15:38",
+      "checkOut": "2025-02-01T15:38",
+      "adults": "01",
+      "children": "0",
+      "type": "AC"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "15d6",
+      "busNumber": "jh108929",
+      "seats": "2",
+      "departure": "2025-02-13T16:42",
+      "arrival": "2025-02-21T16:42",
+      "dates": "2025-02-25",
+      "thumbnail": "/assests/images/bus4.jpg"
+    },
+    {
+      "id": "7dfe",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "e24f",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "39c2",
+      "busNumber": "jh108936",
+      "seats": "5",
+      "departure": "2025-02-24T16:53",
+      "arrival": "2025-02-26T04:50",
+      "dates": "2025-02-20",
+      "thumbnail": "/assests/images/bus7.jpg"
+    },
+    {
+      "id": "7b60",
+      "busNumber": "jh108936",
+      "seats": "5",
+      "departure": "2025-02-24T16:53",
+      "arrival": "2025-02-26T04:50",
+      "dates": "2025-02-20",
+      "thumbnail": "/assests/images/bus7.jpg"
+    },
+    {
+      "id": "3694",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "e2f2",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "9954",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "1809",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "d05f",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "a88d",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "a4d8",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "20e9",
+      "busNumber": "jh108936",
+      "seats": "5",
+      "departure": "2025-02-24T16:53",
+      "arrival": "2025-02-26T04:50",
+      "dates": "2025-02-20",
+      "thumbnail": "/assests/images/bus7.jpg"
+    },
+    {
+      "id": "4ecf",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "3cd4",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "6d7c",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "3c89",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "4025",
+      "busNumber": "jh108927",
+      "seats": "4",
+      "departure": "2025-02-15T04:47",
+      "arrival": "2025-02-22T16:47",
+      "dates": "2025-02-20",
+      "thumbnail": "/assests/images/bus5.jpg"
+    },
+    {
+      "id": "534a",
+      "busNumber": "jh108936",
+      "seats": "5",
+      "departure": "2025-02-24T16:53",
+      "arrival": "2025-02-26T04:50",
+      "dates": "2025-02-20",
+      "thumbnail": "/assests/images/bus7.jpg"
+    },
+    {
+      "id": "0423",
+      "busNumber": "jh108978",
+      "seats": "4",
+      "departure": "2025-02-22T16:52",
+      "arrival": "2025-02-22T16:52",
+      "dates": "2025-02-26",
+      "thumbnail": "/assests/images/bus8.jpg"
+    },
+    {
+      "id": "eca8",
+      "busNumber": "jh108929",
+      "seats": "2",
+      "departure": "2025-02-13T16:42",
+      "arrival": "2025-02-21T16:42",
+      "dates": "2025-02-25",
+      "thumbnail": "/assests/images/bus4.jpg"
+    },
+    {
+      "id": "196e",
+      "busNumber": "jh108927",
+      "seats": "4",
+      "departure": "2025-02-15T04:47",
+      "arrival": "2025-02-22T16:47",
+      "dates": "2025-02-20",
+      "thumbnail": "/assests/images/bus5.jpg"
+    },
+    {
+      "id": "2980",
+      "busNumber": "jh108927",
+      "seats": "4",
+      "departure": "2025-02-15T04:47",
+      "arrival": "2025-02-22T16:47",
+      "dates": "2025-02-20",
+      "thumbnail": "/assests/images/bus5.jpg"
     }
   ]
 }

@@ -55,7 +55,7 @@ const AddBus = () => {
   return (
     <section className=''>
       <AddBusVideo />
-      <div className='flex justify-end mt-1  md:mx-0 '>
+      <div className='flex justify-end mt-14  md:mx-0 '>
         <div className="  max-w-4xl bg-gradient-to-b from-white to-gray-200 rounded-2xl p-3 border-5 border-white shadow-lg mx-5 my-5 grid grid-cols-1 ">
          
           <div className="flex flex-col ">

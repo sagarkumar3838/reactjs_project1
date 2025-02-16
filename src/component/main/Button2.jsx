@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
     text-decoration: none;
     letter-spacing: 4px;
     color: transparent;
-    border: 3px solid #ff0;
+    border: 3px solid #C21E56;
     font-size: 14px;
     position: relative;
     font-family: inherit;
@@ -31,8 +31,8 @@ const StyledWrapper = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #363631;
-    color: #ff0;
+    background-color: #DE3163;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,8 +52,8 @@ const StyledWrapper = styled.div`
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #363631;
-    color: #ff0;
+    background-color: #DE3163;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,12 +7,15 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import UserButton from './UserButton';
+import UserSignup from './UserSignup';
+import { useNavigate } from 'react-router-dom';
+import UserHomePage from './UserHomePage';
 
 const ContactForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user , setUser] = useState("")
+  const [user , setUser] = useState([])
 
 
 
@@ -28,6 +31,9 @@ const ContactForm = () => {
   })
   },[])
   console.log(user);
+
+   let navigate = useNavigate()
+  
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -38,10 +44,11 @@ const ContactForm = () => {
         })
     
         if (bool.length>0){
-          toast.success("Admin login successfully")
+          toast.success("user login successfully")
+          navigate('/userhomepage')
         }
         else{
-          toast.error("Admin data not correct")
+          toast.error("user data not correct")
         }
     
 
@@ -74,7 +81,7 @@ const ContactForm = () => {
       <div className="mb-4">
         <input
           type="text"
-          className="min-h-[48px] leading-[48px] bg-[#F2F6FD] dark:bg-[#2A384C] border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
+          className="min-h-[40px] leading-[48px] bg-[#F2F6FD] dark:bg-[#2A384C] border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
           placeholder="Enter Name"
           required
           value={username}
@@ -104,15 +111,17 @@ const ContactForm = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div className="text-start">
+      <div className="text-start flex gap-4">
         <button
           type="submit"
           className="bg-blue-600 hover:bg-opacity-90 text-white px-8 py-3 rounded mb-4"
         >
           Submit
         </button>
-        <Link to="/UserSignup"><UserButton/></Link>
+        <Link to="/usersignUp"><UserButton/></Link> 
       </div>
+     
+    
       <ToastContainer />
     </form>
   );

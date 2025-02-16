@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+
+
 /* Custom styles */
 
 
@@ -27,3 +30,47 @@
   box-shadow: 4px 4px 10px #b8b8b8, 
               -4px -4px 10px #ffffff; /* Lighter shadow on hover */
 }
+
+/* DockDemo.css */
+.dock-demo {
+  position: relative;
+}
+
+.dock-window {
+ /* Semi-transparent white background */
+ /* Blur effect */
+  border-radius: 10px; /* Rounded corners */
+ /* Light border for depth */
+  padding: 40px; /* Padding for content */
+
+}
+
+
+
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+

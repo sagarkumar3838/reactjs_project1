@@ -8,16 +8,16 @@ const ViewBus = () => {
     
     let bus = location.state;
   return (
-    <StyledWrapper>
+    <StyledWrapper className='ml-[32rem] mt-[10rem] '>
       <div className="flip-card ">
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <p className="title"></p>
-            <p><img src="/assests/images/bus-2730653_1280.jpg" alt="" sizes="" srcset="" /></p>
+            <p><img src="/assests/images/bus3.jpg" alt="" sizes="" srcset=""  className='object-cover h-[23.8rem] w-[32rem] rounded-2xl'/></p>
           </div>
           <div className="flip-card-back">
-            <p className="title">Avaliable Bus Seats</p>
-            <p>{bus.seats}</p>
+            <p className="title">Avaliable Bus Seats : {bus.seats}</p>
+            <p></p>
           </div>
         </div>
       </div>
@@ -28,8 +28,8 @@ const ViewBus = () => {
 const StyledWrapper = styled.div`
   .flip-card {
     background-color: transparent;
-    width: 12rem;
-    height: 18rem;
+    width: 32rem;
+    height: 24rem;
     perspective: 1000px;
     font-family: sans-serif;
   }
@@ -64,7 +64,7 @@ const StyledWrapper = styled.div`
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 1px solid coral;
+    border: 2px solid coral;
     border-radius: 1rem;
   }
 

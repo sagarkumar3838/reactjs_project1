@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [admin , setAdmin] = useState([])

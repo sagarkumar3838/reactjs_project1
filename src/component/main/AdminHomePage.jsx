@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import AdminDashBoard from './AdminDashBoard';
 import AddBus from './AddBus';
 import ViewBus from './ViewBus';
+import EditBus from './EditBus';
+import ErrorPage from '../ErrorPage';
 
 const AdminHomePage = () => {
   return (
@@ -19,6 +21,9 @@ const AdminHomePage = () => {
             <Route path='/dashboard' element={<AdminDashBoard />} />
             <Route path="/addbus" element={<AddBus />} />
             <Route path="/viewbus/:id" element={<ViewBus />} />
+            <Route path="/editbus/:id" element={<EditBus />} />
+
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </main>
       </section>
